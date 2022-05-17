@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getPlaneta = (url) => {
+export const getPlanetaRequest = (url) => {
     return axios(url,{
         method: 'GET'
     });
