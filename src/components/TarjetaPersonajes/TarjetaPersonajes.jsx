@@ -3,7 +3,7 @@ import React from "react";
 import TarjetaPersonajesContainer from "./TarjetaPersonajes-style";
 
 const TarjetaPersonaje = ({name, imgPersonaje, namePlaneta}) => {
-    let imgPlanetas = "../../assets/img/planetas/"+{namePlaneta}+".png";
+    let imgPlanetas = `../../assets/img/planetas/${namePlaneta}.png`;
     return(
         <TarjetaPersonajesContainer>
             <div class="personaje">
