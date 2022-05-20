@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import fondo from "../../assets/img/fondo-tarjeta.jpg";
 
 const TarjetaPersonajesContainer = styled.div`
     position: relative;
     width: 200px;
     min-height: 320px;
-    background: url(../../assets/img/fondo-tarjeta.jpg) no-repeat center center;
+    background: url(${fondo}) no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,9 +30,12 @@ const TarjetaPersonajesContainer = styled.div`
         position: absolute;
         z-index: 4;
         width: 70px;
+        min-height: 70px;
         top: 57%;
         right: 5%;
         img{
+            min-width: 70px;
+            min-height: 70px;
             border-radius: 50%;
             border: solid 4px white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
