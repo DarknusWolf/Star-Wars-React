@@ -1,9 +1,41 @@
-import './App.css';
+import React, { useEffect, useState} from 'react';
+
+import ListaPersonajes from './containers/ListaPersonajes/ListaPersonajes';
+import TarjetaPersonajes from './components/TarjetaPersonajes/TarjetaPersonajes';
+
+import {usePersonajes} from './services/swapi/sw-services';
 
 function App() {
+  const servicioPersonajes = usePersonajes();
+  const [listPersonajes, setListPersonajes] = useState([]);
+
+  useEffect(() => {
+    const getListPersonajes = async () => {
+      const personajes = await servicioPersonajes.getPersonajes();
+      const {results} = await personajes.data;
+      setListPersonajes(results);
+    }
+    
+    getListPersonajes();
+  },[]);
+
   return (
     <div className="App">
-      <h1>En desarrollo</h1>
+      <ListaPersonajes>
+          {
+            listPersonajes.map((personajes, index) => {
+              return(
+                <li key={index}>
+                  <TarjetaPersonajes
+                    nombre={personajes.name}
+                    imgPersonaje='https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg'
+                    homeworld={personajes.homeworld}
+                  />
+                </li>
+              );
+            })
+          }
+        </ListaPersonajes>
     </div>
   );
 }
