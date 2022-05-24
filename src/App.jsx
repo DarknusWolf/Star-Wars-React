@@ -27,9 +27,9 @@ function App() {
               return(
                 <li key={index}>
                   <TarjetaPersonajes
-                    name={personajes.name}
+                    nombre={personajes.name}
                     imgPersonaje='https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg'
-                    namePlaneta='Bespin'
+                    homeworld={personajes.homeworld}
                   />
                 </li>
               );
