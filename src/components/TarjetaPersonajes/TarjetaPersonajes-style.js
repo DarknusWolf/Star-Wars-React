@@ -18,10 +18,14 @@ const TarjetaPersonajesContainer = styled.div`
     div.personaje{
         margin-top: 20px;
         width: 160px;
-        min-height: 230px;
+        min-height: 210px;
         img{
+            min-width: 160px;
+            height: 210px;
             border-radius: 9px;
             border: solid 4px white;
+            background-color: black;
+            // object-fit: contain;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         }
     }
@@ -31,23 +35,23 @@ const TarjetaPersonajesContainer = styled.div`
         z-index: 4;
         width: 70px;
         min-height: 70px;
-        top: 57%;
+        top: 55%;
         right: 5%;
         img{
             min-width: 70px;
             min-height: 70px;
             border-radius: 50%;
             border: solid 4px white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         }
     }
 
     .nombre{
         font-family: 'SW';
-        margin: 10px 20px 20px 20px;
+        margin: 30px 20px 20px 20px;
         font-size: 22px;
         text-align: center;
         font-weight: lighter;
+        text-shadow: 0 0 5px #FF0000, 0 0 9px #0000FF;
         color:white;
         border:none;
     }
