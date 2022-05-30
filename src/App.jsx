@@ -28,7 +28,6 @@ function App() {
                 <li key={index}>
                   <TarjetaPersonajes
                     nombre={personajes.name}
-                    imgPersonaje='https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg'
                     homeworld={personajes.homeworld}
                   />
                 </li>
