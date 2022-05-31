@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 
+import Header from './containers/Header/Header';
 import ListaPersonajes from './containers/ListaPersonajes/ListaPersonajes';
 import TarjetaPersonajes from './components/TarjetaPersonajes/TarjetaPersonajes';
 
@@ -20,22 +21,25 @@ function App() {
   },[]);
 
   return (
-    <div className="App">
-      <ListaPersonajes>
-          {
-            listPersonajes.map((personajes, index) => {
-              return(
-                <li key={index}>
-                  <TarjetaPersonajes
-                    nombre={personajes.name}
-                    homeworld={personajes.homeworld}
-                  />
-                </li>
-              );
-            })
-          }
-        </ListaPersonajes>
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <ListaPersonajes>
+            {
+              listPersonajes.map((personajes, index) => {
+                return(
+                  <li key={index}>
+                    <TarjetaPersonajes
+                      nombre={personajes.name}
+                      homeworld={personajes.homeworld}
+                    />
+                  </li>
+                );
+              })
+            }
+          </ListaPersonajes>
+      </div>
+    </>
   );
 }
 
