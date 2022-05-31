@@ -17,7 +17,7 @@ const DetallesPersonaje = () => {
         const personajes = await servicioPersonajes.getPersonajes();
         const {results} = await personajes.data;
         for(let i = 0; i < results.length; i++){
-            if(results[i].name == nombre){
+            if(results[i].name === nombre){
                 getInfoPersona(results[i].url);
             }
         }
@@ -25,7 +25,7 @@ const DetallesPersonaje = () => {
 
     const getPersonaje = async (nom) => {
         for(let i = 0; i < datosExtra.length; i++){
-            if(datosExtra[i].name == nom){
+            if(datosExtra[i].name === nom){
                 setPersonajeDatoExtra(datosExtra[i]);
             }
         }
@@ -37,7 +37,7 @@ const DetallesPersonaje = () => {
             const person = await personaRequest.data;
             setElPersonaje(person);
         }catch(error){
-            setError("Oh, un error al parecer habido ha. Mmmm...")
+            setError("Oh, un error al parecer habido ha. Mmmm...");
         }
     }
 
