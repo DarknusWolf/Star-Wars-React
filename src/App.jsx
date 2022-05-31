@@ -44,6 +44,7 @@ function App() {
             onChange={(e) => handleSearch(e)}
             />
         </div>
+        {/*  */}
         <ListaPersonajes>
           {
             searchedPersonaje.map((personajes, index) => {
