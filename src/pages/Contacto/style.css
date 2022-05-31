@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+img{
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'SW';
+    src: url('../../assets/extra/SFDistantGalaxy.ttf');
+}
+
+@font-face {
+    font-family: 'DS';
+    src: url('../../assets/extra/DeathStar-VmWB.ttf');
+}
+
+
+
+div.formulario {
+    background: url(../../assets/img/fondo.jfif) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.formulario div.contenido{
+    width: 100%;
+    padding: 40px;
+    background-position: center center;
+    background: radial-gradient(circle, rgba(3, 11, 39, 0.7), rgba(0,0,0, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.formulario div.contenido h2{
+    margin-bottom: 18px;
+    font-family: 'SW';
+    font-size: 50px;
+    color: black;
+    -webkit-text-stroke: 1px #FFE81F;
+}
+
+div.formulario div.contenido p{
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+}
+
+div.formulario div.contenido form{
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.formulario div.contenido form input, div.formulario div.contenido form textarea{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: 5px solid #FFE81F;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+div.formulario div.contenido form input:focus-visible, div.formulario div.contenido form textarea:focus-visible{
+    outline: none;
+}
+
+div.formulario div.contenido form input.boton{
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: all 300ms;
+}
+
+div.formulario div.contenido form input.boton:hover{
+    background-color: #FFE81F;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+}

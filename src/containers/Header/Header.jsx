@@ -9,9 +9,10 @@ const Header = () => {
             <Link to="/">
                 <img src={logo} alt="Logo Star Wars" />
             </Link>
-            {/* <Link to="/">Home</Link>
-            <Link to="/personajes">Persojes</Link>
-            <Link to="/contacto">Contacto</Link> */}
+            <div className='enlaces'>
+                <Link to="/">Personajes</Link>
+                <Link to="/contacto">Contacto</Link>
+            </div>
         </HeaderContainer>
     );
 };
