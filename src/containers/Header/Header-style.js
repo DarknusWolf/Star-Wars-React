@@ -14,6 +14,10 @@ const HeaderContainer = styled.header`
     img{
         max-width: 100%;
         max-height: 80px;
+        transition: all 300ms;
+        // &:hover{
+        //     fill: #FFE81F; 
+        // }
     }
     div.enlaces{
         a{

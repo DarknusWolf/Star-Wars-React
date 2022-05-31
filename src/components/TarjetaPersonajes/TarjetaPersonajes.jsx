@@ -17,7 +17,7 @@ const TarjetaPersonaje = ({nombre, homeworld}) => {
 
     const getPersonaje = async (nom) => {
         for(let i = 0; i < datosExtra.length; i++){
-            if(datosExtra[i].name == nom){
+            if(datosExtra[i].name === nom){
                 setPersonaje(datosExtra[i]);
             }
         }
