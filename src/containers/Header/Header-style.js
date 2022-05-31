@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
+    z-index: 999;
+    position: relative;
     width: 100%;
     height: 100px;
-    padding: 8px 20px;
+    padding: 8px 30px;
     background-color: black;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
     display: flex;
@@ -12,6 +14,20 @@ const HeaderContainer = styled.header`
     img{
         max-width: 100%;
         max-height: 80px;
+    }
+    div.enlaces{
+        a{
+            font-family: 'SW';
+            font-size: 28px;
+            font-weight: lighter;
+            text-decoration:none;
+            color: white;
+            margin-left: 40px;
+            transition: all 300ms;
+            &:hover{
+                color: #FFE81F;
+            }
+        }
     }
 `;
 
