@@ -23,6 +23,7 @@ img{
 
 
 div.formulario {
+    height: 100vh;
     background: url(../../assets/img/fondo.jfif) no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
