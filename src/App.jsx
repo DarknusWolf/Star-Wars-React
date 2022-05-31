@@ -1,4 +1,6 @@
 import React, { useEffect, useState} from 'react';
+import './App.css';
+import { Link } from "react-router-dom";
 
 import Header from './containers/Header/Header';
 import ListaPersonajes from './containers/ListaPersonajes/ListaPersonajes';
@@ -23,16 +25,18 @@ function App() {
   return (
     <>
       <Header />
-      <div className="App">
+      <div className="contenido">
         <ListaPersonajes>
             {
               listPersonajes.map((personajes, index) => {
                 return(
                   <li key={index}>
-                    <TarjetaPersonajes
-                      nombre={personajes.name}
-                      homeworld={personajes.homeworld}
-                    />
+                    <Link to={`/personaje/${personajes.name}`}>
+                      <TarjetaPersonajes
+                        nombre={personajes.name}
+                        homeworld={personajes.homeworld}
+                      />
+                    </Link>
                   </li>
                 );
               })
