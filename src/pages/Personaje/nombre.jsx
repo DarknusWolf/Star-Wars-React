@@ -61,7 +61,7 @@ const DetallesPersonaje = () => {
                         <p><span>Color de ojos:</span> {elPersonaje.eye_color}</p>
                         <p><span>Genero:</span> {elPersonaje.gender}</p>
                         <p><span>Cumpleaños:</span> {elPersonaje.birth_year}</p>
-                        <p><span>Planeta:</span> {personajeDatoExtra.homeworld}</p>
+                        {/* <p><span>Planeta:</span> {personajeDatoExtra.homeworld}</p> */}
                     </div>
                 </div>
             </div>
